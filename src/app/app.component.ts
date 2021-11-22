@@ -45,18 +45,7 @@ export class AppComponent {
     this.phno=null;
     this.baseUrl=null;
   }
-  onFileSelected(event:any) {
-    if (event.target.files) {
-      var reader = new FileReader();
-      reader.readAsDataURL(event.target.files[0]);
-      reader.onload = (event1: any) => {
-        console.log(event1, "event1");
-        this.baseUrl = event1.target.result;
-        console.log('vals', this.baseUrl);
-      }
-    }
-  }
-  openAddContact() {
+  add_contact() {
     if (!this.isDialogOpen) {
       this.isDialogOpen = true;
     }
